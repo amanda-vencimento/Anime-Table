@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Watching List</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-bar">
+            <h1 class="main-title">Currently Watching (CW)</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="table-content">
+            <h2 class="table-title">Anime Currently Watching List</h2>
+            <table id="cw-anime-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Status</th>
+                        <th>Score</th>
+                        <th>Progress</th>
+                        <th>Episodes</th>
+                        <th>EPs to complete</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+
+               <tbody id="anime-cw">
+                    <tr class="item-cw">
+                        <td class="anime-title">Shin Seiki Evangelion</td>
+                        <td class="anime-status">Currently Watching</td>
+                        <td class="anime-score"></td>
+                        <td class="ep-progress">5</td>
+                        <td class="ep-total">26</td>
+                        <td class="ep-to-complete"></td>
+                        <td class="anime-type">TV</td>
+                    </tr>
+
+                    <tr class="item-cw">
+                        <td class="anime-title">Mainichi Kaasan</td>
+                        <td class="anime-status">Currently Watching</td>
+                        <td class="anime-score"></td>
+                        <td class="ep-progress">144</td>
+                        <td class="ep-total">142</td>
+                        <td class="ep-to-complete"></td>
+                        <td class="anime-type">TV</td>
+                    </tr>
+
+                    <tr class="item-cw">
+                        <td class="anime-title">Ayakashi: Japanese Classic Horror</td>
+                        <td class="anime-status">Currently Watching</td>
+                        <td class="anime-score"></td>
+                        <td class="ep-progress">3</td>
+                        <td class="ep-total">-11</td>
+                        <td class="ep-to-complete"></td>
+                        <td class="anime-type">TV</td>
+                    </tr>
+
+                    <tr class="item-cw">
+                        <td class="anime-title">Yuu☆Yuu☆Hakusho</td>
+                        <td class="anime-status">Currently Watching</td>
+                        <td class="anime-score"></td>
+                        <td class="ep-progress">90</td>
+                        <td class="ep-total">112</td>
+                        <td class="ep-to-complete"></td>
+                        <td class="anime-type">TV</td>
+                    </tr>
+
+                    <tr class="item-cw">
+                        <td class="anime-title">Saint Seiya</td>
+                        <td class="anime-status">Currently Watching</td>
+                        <td class="anime-score"></td>
+                        <td class="ep-progress">14</td>
+                        <td class="ep-total">114</td>
+                        <td class="ep-to-complete"></td>
+                        <td class="anime-type">TV</td>
+                    </tr>
+
+                    <tr class="item-cw">
+                        <td class="anime-title">Vinland Saga</td>
+                        <td class="anime-status">Currently Watching</td>
+                        <td class="anime-score"></td>
+                        <td class="ep-progress">9</td>
+                        <td class="ep-total">24</td>
+                        <td class="ep-to-complete"></td>
+                        <td class="anime-type">TV</td>
+                    </tr>
+
+                    <tr class="item-cw">
+                        <td class="anime-title">Bleach</td>
+                        <td class="anime-status">Currently Watching</td>
+                        <td class="anime-score"></td>
+                        <td class="ep-progress">274</td>
+                        <td class="ep-total">366</td>
+                        <td class="ep-to-complete"></td>
+                        <td class="anime-type">TV</td>
+                    </tr>
+
+                    <tr class="item-cw">
+                        <td class="anime-title">Shirokuma Cafe</td>
+                        <td class="anime-status">Currently Watching</td>
+                        <td class="anime-score"></td>
+                        <td class="ep-progress">41</td>
+                        <td class="ep-total">50</td>
+                        <td class="ep-to-complete"></td>
+                        <td class="anime-type">TV</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+        <!-- ... -->
+    <section class="container">
+        <h2 id="titulo-form">Add New Item</h2>
+        <ul id="messages-fail"></ul>
+        <form id="new-item-form">
+            <div class="grupo">
+                <label for="item-title">Title:</label>
+                <input id="item-title" name="title" type="text" placeholder="Title" class="campo">
+            </div>
+            <div class="grupo">
+                <label for="item-status">Status:</label>
+                <input id="item-status" name="status" type="text" placeholder="Current status" class="campo campo-medio">
+            </div>
+            <div class="grupo">
+                <label for="item-score">Score:</label>
+                <input id="item-score" name="score" type="text" placeholder="Score" class="campo campo-medio">
+            </div>
+            <div class="grupo">
+                <label for="item-progress">Progress:</label>
+                <input id="item-progress" name="progress" type="text" placeholder="Progress" class="campo campo-medio">
+            </div>
+            <div class="grupo">
+                <label for="item-episode"># Episodes:</label>
+                <input id="item-episode" name="episode" type="text" placeholder="Episodes" class="campo campo-medio">
+            </div>
+            <div class="grupo">
+                <label for="item-type">Type:</label>
+                <input id="item-type" name="type" type="text" placeholder="Progress" class="campo campo-medio">
+            </div>
+
+            <button id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+        </form>
+    </section>
+
+    <script src="./assets/js/eps-to-complete.js"></script>
+    <script src="./assets/js/form.js"></script>
+    <script src="./assets/js/erase-title.js"></script>
+
+</body>
+</html>
